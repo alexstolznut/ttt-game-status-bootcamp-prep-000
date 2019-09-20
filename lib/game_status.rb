@@ -54,7 +54,7 @@ def draw?(board)
       return false
 
   elsif  board.none?(" ")
-    return true
+    return false
   elsif won?(board) == false && board.any?(" ") || won?(board) != false && board.none?(" ")
     return false
   end

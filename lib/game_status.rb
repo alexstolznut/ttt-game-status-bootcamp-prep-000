@@ -49,7 +49,7 @@ end
 
 def draw?(board)
 
-    if won?(board).class == Array
+    if won?(board).class != false
       return false
     end
   if won?(board) == false && board.none?(" ")

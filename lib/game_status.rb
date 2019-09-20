@@ -49,7 +49,7 @@ end
 
 def draw?(board)
 
-  if won?(board) != false && board.none?(" ")
+  if won?(board) == false && board.none?(" ")
     puts "#{won?(board)}"
       return true
 

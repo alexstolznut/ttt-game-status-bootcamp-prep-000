@@ -49,7 +49,7 @@ end
 
 def draw?(board)
 
-    if won?(board).class != false
+    if won?(board) != false
       return false
     end
   if won?(board) == false && board.none?(" ")

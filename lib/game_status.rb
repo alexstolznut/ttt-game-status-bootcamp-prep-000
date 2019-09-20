@@ -48,11 +48,10 @@ def full?(board)
 end
 
 def draw?(board)
-    WIN_COMBINATIONS.each do |win_combination|
+
     if won?(board).class == Array
       return false
     end
-  end
   if won?(board) == false && board.none?(" ")
     return true
   elsif won?(board) == false && board.any?(" ") || won?(board) != false && board.none?(" ")

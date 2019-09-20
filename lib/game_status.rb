@@ -49,7 +49,7 @@ end
 
 def draw?(board)
     WIN_COMBINATIONS.each do |win_combination|
-    if won?(board) != false
+    if won?(board).class == Array
       return false
     end
   end

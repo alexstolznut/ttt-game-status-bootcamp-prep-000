@@ -48,19 +48,20 @@ def full?(board)
 end
 
 def draw?(board)
-
+    WIN_COMBINATIONS.each do |win_combination|
+    if board[win_combination[0]] == board[win_combination[1]] && board[win_combination[1]] == board[win_combination[2]]
+      return false
+    end
+  end
   if won?(board) == false && board.none?(" ")
-    puts "#{won?(board)}"
-      return true
-
-  elsif  board.none?(" ") && won?(board) != false
-    return false
+    return true
   elsif won?(board) == false && board.any?(" ") || won?(board) != false && board.none?(" ")
     return false
   end
 end
 
 def over?(board)
+
   if won?(board) != false || draw?(board) || full?(board)
     return true
   else
